@@ -3,7 +3,8 @@ description: ""
 baseurl: ""
 url: ""
 
-# Collections
+collections_dir: content
+
 collections:
   bustard:
     output: true
