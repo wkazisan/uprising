@@ -1,0 +1,38 @@
+title: Uprising
+description: ""
+baseurl: ""
+url: ""
+
+# Collections
+collections:
+  bustard:
+    output: true
+    permalink: /bustard/:name/
+  gems:
+    output: true
+    permalink: /gems/:name/
+  ncp:
+    output: true
+    permalink: /ncp/:name/
+  jamat:
+    output: true
+    permalink: /jamat/:name/
+  bnp:
+    output: true
+    permalink: /bnp/:name/
+  info:
+    output: true
+    permalink: /info/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

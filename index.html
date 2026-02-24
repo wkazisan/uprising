@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+---
+
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+    <div id="search-results"></div>
+</div>
+
+<script>
+    window.searchData = [
+        {% for collection in site.collections %}
+    {% for doc in collection.docs %}
+    {
+        "title": "{{ doc.title | escape }}",
+            "url": "{{ doc.url | relative_url }}",
+                "category": "{{ collection.label }}",
+                    "content": "{{ doc.content | strip_html | strip_newlines | truncate: 200 | escape }}"
+    },
+    {% endfor %}
+    {% endfor %}
+  ];
+</script>
